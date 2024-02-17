@@ -1,0 +1,359 @@
+:root{
+    --fundo: #611A0F;
+    --fundo2: #49140c;
+    --fundo3: #490c1e;
+    --fundo_item: #31182a;
+    --generico1: #702F11;
+    --borda: #8A1526;
+    --borda2: #51158a;
+    --texto: #ce711b;
+    --texto2: #610F4C;
+    --texto3: #ec7a0f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--texto);
+}
+body{
+    background-color: var(--fundo);
+    
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:hover,
+select:hover,
+textarea:hover,
+input,
+select,
+textarea{
+    outline: none;
+    border: none;
+}
+#j_body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#pokeU{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.j_input {
+    width: fit-content;
+    margin-top: 100px;
+    font-size: 20px;
+}
+.j_input input{
+    margin-left: 10px;
+    padding: 5px;
+    background-color: var(--fundo2);
+    font-size: 15px;
+}
+.j_input input:hover,
+.j_input input:focus-visible{
+    background-color: var(--fundo3);
+}
+.j_input button{
+    padding: 3px;
+    border: 2px solid var(--texto);
+    font-weight: bold;
+    background-color: var(--texto);
+    color: var(--texto2);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.j_input button:hover{
+    background-color: var(--texto2);
+    color: var(--texto);
+    border: 2px solid var(--texto);
+
+}
+.slider{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: center;
+}
+#myRange{
+    margin-right: 10px;
+    appearance: none;
+    background: var(--fundo2);
+}
+#myRange:hover{
+    appearance: none;
+    background: var(--fundo3);
+    cursor: pointer;
+}
+#myRange::-webkit-slider-thumb{
+    appearance: none;
+    width: 17.5px;
+    height: 17.5px;
+    background: var(--texto);
+}
+#myRange::-webkit-slider-thumb:hover{
+    background: var(--texto3);
+}
+#out{
+    margin-right: 5px;
+}
+#out2{
+    width: 50px;
+}
+#david{
+    display: flex;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#david input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    display: block;
+    height: 17.5px;
+    width: 17.5px;
+    background-color: var(--fundo2);
+    margin-right: 10px;
+}
+#david:hover input ~ .checkmark {
+    background-color: var(--fundo3);
+}
+#david input:checked ~ .checkmark {
+    background-color: var(--fundo_item);
+  }
+.checkmark:after {
+    content: "";
+    display: none;
+}
+#david input:checked ~ .checkmark:after {
+    display: block;
+}
+#david .checkmark:after {
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--texto);
+}
+.starters{
+    display: none;
+    margin-top: 20px;
+    justify-content: space-around;
+    width: 350px;
+}
+.starters .item{
+    width: 100px;
+    height: 100px;
+}
+.starters .item img{
+    height: 100%;
+}
+.container{
+    border: 6px solid var(--borda);
+    background-color: var(--fundo2);
+    width: 80%;
+    height: 580px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-content: space-around;
+}
+.container.c2{
+    justify-content:center;
+    align-content: first baseline;
+    border: none;
+    background-color: none;
+    margin: none;
+}
+.item{
+    width: 15%;
+    height: 23%;
+    box-sizing: border-box;
+    border: 6px solid var(--borda);
+    background-color: var(--fundo_item);
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+.item.c1{
+    transition: border 1s;
+    transition: filter 1s;
+    cursor: pointer;
+}
+.desativado{
+    border: 6px solid var(--borda2);
+    filter: opacity(30%);
+}
+.ativado{
+    border: 6px solid var(--borda);
+}
+.item.c2{
+    height: 140px;
+    margin-bottom: 30px;
+}
+
+.item img{
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.divSpan{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 18px;
+    font-size: 11px;
+    background-color: var(--fundo3);
+    justify-content: flex-start;
+}
+.item span{
+    text-align: center;
+    padding: 2px;
+    text-wrap: nowrap;
+}
+.item span.s1{
+   flex: 2;
+   align-self: flex-start;
+}
+.item span.s1.baixo{
+    background-color: var(--texto);
+    color: var(--texto2);
+    
+}
+.item span.s2 {
+    flex: 1;
+    align-self: flex-end;
+    color: rgb(238, 238, 238);
+    height: fit-content;
+    box-sizing: border-box;
+    border-left: 2px solid var(--texto2);
+}
+
+#teste{
+    position: absolute;
+    
+}
+
+
+
+
+.normal {
+    background-color: #979765;
+    text-shadow: 0.1em 0.2em #5D4638;
+}
+
+.fighting {
+    background-color: #B3241E;
+    text-shadow: 0.1em 0.2em #631502;
+}
+
+.flying {
+    background-color: #977EEC;
+    text-shadow: 0.1em 0.2em #5D4686;
+}
+
+.poison {
+    background-color: #8F318E;
+    text-shadow: 0.1em 0.2em #382A3F;
+}
+
+.ground {
+    background-color: #D9B255;
+    text-shadow: 0.1em 0.2em #755524;
+}
+
+.rock {
+    background-color: #AA8E2A;
+    text-shadow: 0.1em 0.2em #755524;
+}
+
+.bug {
+    background-color: #97A918;
+    text-shadow: 0.1em 0.2em #626600;
+}
+
+.ghost {
+    background-color: #5D4686;
+    text-shadow: 0.1em 0.2em #382A3F;
+}
+
+.steel {
+    background-color: #A9A9C5;
+    text-shadow: 0.1em 0.2em #6D655D;
+}
+
+.fire {
+    background-color: #ED6D24;
+    text-shadow: 0.1em 0.2em #B3241E;
+}
+
+.water {
+    background-color: #547EEC;
+    text-shadow: 0.1em 0.2em #1e5fb3;
+}
+
+.grass {
+    background-color: #64BC3F;
+    text-shadow: 0.1em 0.2em #466D31;
+}
+
+.electric {
+    background-color: #dfb11d;
+    text-shadow: 0.1em 0.1em #a07525;
+    color: rgb(226, 226, 226) !important;
+}
+
+.psychic {
+    background-color: #F74675;
+    text-shadow: 0.1em 0.2em #740474;
+}
+
+.ice {
+    background-color: #85CFCF;
+    text-shadow: 0.1em 0.2em #7D7D8F;
+}
+
+.dragon {
+    background-color: #5C2BF6;
+    text-shadow: 0.1em 0.2em #372B7D;
+}
+
+.dark {
+    background-color: #5D4638;
+    text-shadow: 0.1em 0.2em #38312A;
+}
+
+.fairy {
+    background-color: #D694D6;
+    text-shadow: 0.1em 0.2em #A865AD;
+}
